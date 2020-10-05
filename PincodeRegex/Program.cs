@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace PincodeRegex
 {
@@ -6,7 +7,16 @@ namespace PincodeRegex
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to pin code validation problem");
+            long pinCode = 400088;
+            Regex reZip = new Regex("^[0-9]{6}$");
+            if (reZip.IsMatch(pinCode.ToString()))
+            {
+                Console.WriteLine("Valid PIN Code");
+            }
+            else
+            {
+                Console.WriteLine("Invalid PIN Code");
+            }
         }
     }
 }
