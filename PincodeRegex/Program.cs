@@ -7,7 +7,8 @@ namespace PincodeRegex
     {
         static void Main(string[] args)
         {
-            long pinCode = 400088;
+            Console.WriteLine("Enter the PIN code");
+            string pinCode = Console.ReadLine();
             Regex reZip = new Regex("^[0-9]{6}$");
             if (reZip.IsMatch(pinCode.ToString()))
             {
